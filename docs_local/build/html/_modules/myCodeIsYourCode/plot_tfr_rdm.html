@@ -126,7 +126,7 @@
 
     <span class="n">conds</span>   <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;grat&#39;</span><span class="p">,</span> <span class="s1">&#39;nat&#39;</span><span class="p">]</span>
 
-    <span class="c1">#results_path = &#39;/Volumes/Gandalf/MWlamprop/data/&#39;</span>
+    <span class="c1"># results_path = &#39;/Users/.../data/&#39;</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.dpi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">300</span>
 
     <span class="k">if</span> <span class="n">block</span> <span class="o">==</span> <span class="s1">&#39;grat&#39;</span><span class="p">:</span>
@@ -246,17 +246,13 @@
 
     <span class="n">n_fband</span> <span class="o">=</span> <span class="mi">3</span>
     <span class="k">for</span> <span class="n">fband</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_fband</span><span class="p">):</span>
-        <span class="c1"># Genertal configuration</span>
+        <span class="c1"># General configuration</span>
 
         <span class="n">conf</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;paths&#39;</span>    <span class="p">:</span> <span class="p">[</span>
-            <span class="s1">&#39;/Users/nicogravel/Documents/Gandalf/MWlamprop/data/results_bckp/&#39;</span><span class="p">,</span>
-            <span class="c1"># &#39;/mnt/hpc_slurm/projects/MWlamprop/Analysis/02_data/spectral_dec/&#39;</span>
-            <span class="c1">#&#39;/mnt/hpc/projects/MWlamprop/Analysis/02_data/preprocessed/&#39;,</span>
-            <span class="c1">#&#39;/mnt/pns/home/graveln/Documents/MWlamprop/results/spectral_dec/&#39;,</span>
-            <span class="c1">#&#39;/mnt/hpc/projects/MWlamprop/Analysis/02_data/spectral_dec/&#39;,</span>
-            <span class="s1">&#39;/Volumes/Gandalf/MWlamprop/data/&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;/Volumes/Gandalf/MWlamprop/results/&#39;</span>
+            <span class="s1">&#39;/Volumes/.../data/results_bckp/&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;/Volumes/.../data/&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;/Volumes/.../results/&#39;</span>
             <span class="p">],</span>
             <span class="s1">&#39;methods&#39;</span>  <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;spectral&#39;</span><span class="p">,</span><span class="s1">&#39;mvpa&#39;</span><span class="p">],</span>
             <span class="s1">&#39;decvars&#39;</span>  <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;spw&#39;</span><span class="p">,</span><span class="s1">&#39;gpr&#39;</span><span class="p">,</span><span class="s1">&#39;spwgpr&#39;</span><span class="p">],</span>

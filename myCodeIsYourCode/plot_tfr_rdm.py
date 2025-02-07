@@ -27,7 +27,7 @@ def plot_tfr_rdm(conf):
 
     conds   = ['grat', 'nat']
 
-    #results_path = '/Volumes/Gandalf/MWlamprop/data/'
+    # results_path = '/Users/.../data/'
     plt.rcParams['figure.dpi'] = 300
 
     if block == 'grat':
@@ -147,17 +147,13 @@ def plot_tfr_rdm(conf):
 
     n_fband = 3
     for fband in range(n_fband):
-        # Genertal configuration
+        # General configuration
 
         conf = {
             'paths'    : [
-            '/Users/nicogravel/Documents/Gandalf/MWlamprop/data/results_bckp/',
-            # '/mnt/hpc_slurm/projects/MWlamprop/Analysis/02_data/spectral_dec/'
-            #'/mnt/hpc/projects/MWlamprop/Analysis/02_data/preprocessed/',
-            #'/mnt/pns/home/graveln/Documents/MWlamprop/results/spectral_dec/',
-            #'/mnt/hpc/projects/MWlamprop/Analysis/02_data/spectral_dec/',
-            '/Volumes/Gandalf/MWlamprop/data/',
-            '/Volumes/Gandalf/MWlamprop/results/'
+            '/Volumes/.../data/results_bckp/',
+            '/Volumes/.../data/',
+            '/Volumes/.../results/'
             ],
             'methods'  : ['spectral','mvpa'],
             'decvars'  : ['spw','gpr','spwgpr'],

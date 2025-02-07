@@ -123,7 +123,7 @@ cd  /home/nicolas/Documents/GitHubProjects/UNICOG_ResearchLog/
 
 # Add, commit and push the changes
 git add .
-git commit -m "reverting a previous incorrect configuration change"
+git commit -m "first commit"
 git push -u origin main
 
 
