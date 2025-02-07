@@ -1,0 +1,6 @@
+name: sphinx
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+prefix: /home/nicolas/anaconda3/envs/sphinx
