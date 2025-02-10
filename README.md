@@ -100,7 +100,7 @@ The environment contains Sphinx 5.2.0 and the associated dependencies needed to 
 
   ```
     
-  Create myCodeIsYourCode directory an add empty *__init__.py* file to it, together with a python file that prints "hello world" to your package:
+  Create myCodeIsYourCode directory an add empty **__**init**__****.py** file to it, together with a python file that prints "hello world" to your package:
   
   ```shell
   mkdir myCodeIsYourCode
