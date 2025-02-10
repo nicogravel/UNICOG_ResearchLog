@@ -112,10 +112,7 @@ pyenv virtualenv 3.8.19 Sphinx
 pyenv activate Sphinx
 pip install -r requirements.txt
 
-# Then one must force-install Sphinx version 5.2.0
-pip install Sphinx==5.2.0
-pip install myst-parser==2.0.0
-pip install sphinxcontrib-bibtex==1.0.0
+
 
 #which leads to this error:
 ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
@@ -141,7 +138,7 @@ cd  /home/nicolas/Documents/GitHubProjects/UNICOG_ResearchLog/
 
 # Add, commit and push the changes
 git add .
-git commit -m "went back to Sphinx 7.2.0, hoping to get disqus to work again"
+git commit -m "fixing dependencies"
 git push -u origin main
 
 
