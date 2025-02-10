@@ -137,7 +137,7 @@ cd  /home/nicolas/Documents/GitHubProjects/UNICOG_ResearchLog/
 
 # Add, commit and push the changes
 git add .
-git commit -m "new README.md!"
+git commit -m "more edits to the README.md file"
 git push -u origin main
 
 

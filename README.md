@@ -82,7 +82,7 @@ The folder `docs/html` will be copied from `docs_local/build/html` once we build
   
   ```shell
   cd ResearchLog
-  touch pyproject.toml.py
+  touch pyproject.toml
   ```
   
   and add the following to `pyproject.toml`:
