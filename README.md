@@ -6,7 +6,7 @@ This tutorial is a collaborative effort with [Christophe Pallier](https://github
 
 
 <details>
-  <summary><span style="color:#3382FF"> Set up research project codebook folder using Python, Sphinx and Github</span></summary>  
+  <summary><span style="color:#3382FF"> 1.- Set up research project codebook folder using Python, Sphinx and Github</span></summary>  
 
   First, we want to create a project folder that will contain the research code (Matlab, Python, Jupyter notebooks, etc), the data, the results and the documentation:
 
@@ -28,7 +28,7 @@ Inside docs/index.html we add:
   ```html
   <meta http-equiv="refresh" content="0; url=./html/index.html" />
   ```
-The folder *docs/html* will be copied from *docs_local/build/html* once we build the docs, as explained below. Meanwhile, the folder *docs_local* is added to *.gitignore*.
+The folder `docs/html` will be copied from `docs_local/build/html` once we build the docs, as explained below. Meanwhile, the folder `docs_local` is added to `.gitignore`.
 
 </details>
 
@@ -73,14 +73,14 @@ The environment contains Sphinx 5.2.0 and the associated dependencies needed to 
 <details>
   <summary><span style="color:#3382FF"> Create a Python package</span></summary>  
 
-  Create a pyproject.toml file in the root of your project: 
+  Create a `pyproject.toml` file in the root of your project: 
   
   ```shell
   cd ResearchLog
   touch pyproject.toml.py
   ```
   
-  and add the following to pyproject.toml:
+  and add the following to `pyproject.toml`:
 
   ```toml
   [build-system]
@@ -100,7 +100,7 @@ The environment contains Sphinx 5.2.0 and the associated dependencies needed to 
 
   ```
     
-  Create myCodeIsYourCode directory an add empty **__**init**__****.py** file to it, together with a python file that prints "hello world" to your package:
+  Create myCodeIsYourCode directory an add empty `__init__.py` file to it, together with a python file that prints "hello world" to your package:
   
   ```shell
   mkdir myCodeIsYourCode
@@ -137,7 +137,7 @@ Try it:
 <details>
   <summary><span style="color:#3382FF"> Generate project and code documentation using Sphinx</span></summary>  
 
-  The folder *docs_local* will be used to generate the [sphinx](https://www.sphinx-doc.org/en/master/index.html) documentation. Then, we will copy the *build/html* to *docs*.
+  The folder `docs_local` will be used to generate the [sphinx](https://www.sphinx-doc.org/en/master/index.html) documentation. Then, we will copy the `build/html` to `docs`.
 
   ```shell
   cd /home/.../ResearchLog/docs_local/
@@ -145,7 +145,7 @@ Try it:
   rsync -a --delete /home/.../ResearchLog/docs_local/build/html /home/.../ResearchLog/docs/
   ```
 
-Edit *myCodeIsYourCode.rst*: add *:noindex:* to the end of the file, as follows:
+Edit `myCodeIsYourCode.rst`: add *:noindex:* to the end of the file, as follows:
 
 ```rst
 Module contents
@@ -176,13 +176,13 @@ Now enjoy building up your python package!
   make html
   ```
 
-  After adding new code and document everything, write docstrings, etc, do not forget to commit the changes to Github and update both the documentation and the package. For example, if you write new python functions, do:
+  After adding new code and document everything, working on docstrings, etc, do not forget to commit the changes to Github and update both the documentation and the package. For example, if you write new python functions, do:
 
   ```shell
   pip install -e .
   sphinx-apidoc -f -o docs_local/source myCodeIsYourCode
   git add .
-  git commit -m "replace setup.py for pyproject.toml, updates in docstrings"
+  git commit -m "replace setup.py for pyproject.toml, updates in docstrings, etc"
   git push -u origin main'
   ```
 
