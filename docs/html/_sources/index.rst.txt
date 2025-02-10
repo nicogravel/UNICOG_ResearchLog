@@ -9,7 +9,7 @@ Documenting research with *Sphinx*
 **Goal:** keep track of progress during the research process.   
 *************************************************************
 
-The tutorial is an adaptation of `The Good Research Code Handbook <https://goodresearch.dev>`_, by Patrick Mineault. It is delivered as a Github repo based on `Sphinx <https://www.sphinx-doc.org/en/master/>`_, `Markdown <https://daringfireball.net/projects/markdown/>`_ and `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_ (rendered using `Github pages and Jekyll <https://jekyllrb.com/docs/github-pages/>`_). Its purpose is to provide us with a scaffold for a personalised *research log* that can be easily adapted to one's individual needs.     
+The tutorial is an adaptation of `The Good Research Code Handbook <https://goodresearch.dev>`_, by Patrick Mineault. It is delivered as a Github repo based on `Sphinx <https://www.sphinx-doc.org/en/master/>`_, `Markdown <https://daringfireball.net/projects/markdown/>`_ and `reStructuredText <https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site>`_ (rendered using `Github pages <https://jekyllrb.com/docs/github-pages/>`_). Its purpose is to provide us with a scaffold for a personalised *research log* that can be easily adapted to one's individual needs.     
   
   
 Before we begin, I wanted to share a couple of stories, both as a primer and as an example of how to use the resource, its functionalities, etc. 
