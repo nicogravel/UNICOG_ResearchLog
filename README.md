@@ -35,7 +35,7 @@ The folder `docs/html` will be copied from `docs_local/build/html` once we build
 <br>
 
 <details>
-  <summary><span style="color:#3382FF"> Set up pyenv environment (first install pyenv)</span></summary>  
+  <summary><span style="color:#3382FF"> 2.- Set up pyenv environment (first install pyenv)</span></summary>  
 
   We can then create a python environment locally and install Sphinx:
 
@@ -53,7 +53,7 @@ The environment contains Sphinx 5.2.0 and the associated dependencies needed to 
 <br>
   
 <details>
-  <summary><span style="color:#3382FF"> Initialize or fork Github project</span></summary>  
+  <summary><span style="color:#3382FF"> 3.- Initialize or fork Github project</span></summary>  
 
 
   ```
@@ -71,7 +71,7 @@ The environment contains Sphinx 5.2.0 and the associated dependencies needed to 
 <br>
   
 <details>
-  <summary><span style="color:#3382FF"> Create a Python package</span></summary>  
+  <summary><span style="color:#3382FF"> 4.- Create a Python package</span></summary>  
 
   Create a `pyproject.toml` file in the root of your project: 
   
@@ -135,7 +135,7 @@ Try it:
 <br>
 
 <details>
-  <summary><span style="color:#3382FF"> Generate project and code documentation using Sphinx</span></summary>  
+  <summary><span style="color:#3382FF"> 5.- Generate project and code documentation using Sphinx</span></summary>  
 
   The folder `docs_local` will be used to generate the [sphinx](https://www.sphinx-doc.org/en/master/index.html) documentation. Then, we will copy the `build/html` to `docs`.
 
@@ -165,10 +165,10 @@ Now enjoy building up your python package!
 <br>
   
 <details>
-  <summary><span style="color:#3382FF"> Work: edit, make and commit</span></summary>  
+  <summary><span style="color:#3382FF"> 5.- Work: edit, make and commit</span></summary>  
 
 
-  After these steps one wants to *make* the documentation locally. To build the documentation automatically, edit then the document modules.rst –if necessary, and do *make clean* followed by *make html*.
+  After these steps one wants to *make* the documentation locally. To build the documentation automatically, edit then the document `modules.rst` –if necessary, and do *make clean* followed by *make html*.
 
   ``` shell
   cd docs_local
