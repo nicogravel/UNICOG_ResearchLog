@@ -80,7 +80,7 @@ The environment contains Sphinx 5.2.0 and the associated dependencies needed to 
   touch pyproject.toml.py
   ```
   
-  and add the following to setup.py:
+  and add the following to pyproject.toml:
 
   ```toml
   [build-system]
@@ -99,8 +99,9 @@ The environment contains Sphinx 5.2.0 and the associated dependencies needed to 
   where = ["."]
 
   ```
-  Create myCodeIsYourCode directory an add empty __init__.py file to it, together with a python file that prints "hello world" to your package:
-
+    
+  Create myCodeIsYourCode directory an add empty *__init__.py* file to it, together with a python file that prints "hello world" to your package:
+  
   ```shell
   mkdir myCodeIsYourCode
   cd myCodeIsYourCode
