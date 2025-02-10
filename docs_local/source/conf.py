@@ -104,6 +104,13 @@ for mod_name in MOCK_MODULES:
 
 '''
 
+# Switch from conda to pyenv
+Python 3.8.19
+
+pyenv install 3.8.19
+pyenv virtualenv 3.8.19 Sphinx
+pip install -r requirements.txt
+
 # Snippets to build the html files, sync them to the docs folder and push the changes to the remote repository
 
 # Activate sphinx environment
@@ -123,7 +130,7 @@ cd  /home/nicolas/Documents/GitHubProjects/UNICOG_ResearchLog/
 
 # Add, commit and push the changes
 git add .
-git commit -m "first commit"
+git commit -m "pip freeze (hope it works for Sphinx 5.2)"
 git push -u origin main
 
 
