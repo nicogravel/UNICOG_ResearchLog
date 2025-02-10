@@ -137,7 +137,7 @@ cd  /home/nicolas/Documents/GitHubProjects/UNICOG_ResearchLog/
 
 # Add, commit and push the changes
 git add .
-git commit -m "adding link to article on the main page"
+git commit -m "adding doi as link to suggested ref"
 git push -u origin main
 
 
