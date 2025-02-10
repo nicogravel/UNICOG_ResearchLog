@@ -20,7 +20,6 @@ Recently, I encountered an article discussing the ongoing replication crisis in 
 
 If reflecting on this wasn't already challenging, the so-called *Sufficiency and Necessity Principle* then came to mind. I remember having heard about it some years ago during a talk about the integration of causality in enactive approaches by `Shaun Gallagher <https://en.wikipedia.org/wiki/Shaun_Gallagher>`_. One of these concepts often discussed in the context of practical inference of causality. The principle is based on the idea that if a certain variable is necessary for a certain outcome, then the absence of that variable will lead to the absence of the outcome. On the other hand, if a variable is sufficient for an outcome, then the presence of that variable will lead to the presence of the outcome, as shown in the following diagram: 
 
-For a clear and succinct explanation of its limitations, I recommend the following the recent article by Grace Lindsay on The Transmitter: `Claims of necessity and sufficiency are not well suited for the study of complex systems <https://thetransmitter.substack.com/p/the-sufficiency-and-necessity-principle>`_.
 |
     
 .. image:: /figures/Eaton_1985.png
@@ -28,7 +27,8 @@ For a clear and succinct explanation of its limitations, I recommend the followi
       :align: center 
         
   
-Both anecdotes matter to us, as the process of experimental design and statistical inference that we engage in often involves the equivalent of  "deactivating" or "activating" a *region of interest* using various tools (*e.g.* perceptual/cognitive/behavioral tasks, pharmacological interventions, animal models, *etc...*) and recording modalities (*e.g.* electrophysiology, fMRI, *etc...*), measuring changes in behavior before and after manipulation, and then drawing causal links between variables. If deactivation leads to suppression of the desired outcome while activation induces that outcome, a causal link can be inferred. However, it's essential to consider potentially *hidden* variables that may influence this relationship  :footcite:p:`Eaton_1985`. 
+Both anecdotes matter to us, as the process of experimental design and statistical inference that we engage in often involves the equivalent of  "deactivating" or "activating" a *region of interest* using various tools (*e.g.* perceptual/cognitive/behavioral tasks, pharmacological interventions, animal models, *etc...*) and recording modalities (*e.g.* electrophysiology, fMRI, *etc...*), measuring changes in behavior before and after manipulation, and then drawing causal links between variables. If deactivation leads to suppression of the desired outcome while activation induces that outcome, a causal link can be inferred. However, it's essential to consider potentially *hidden* variables that may influence this relationship  :footcite:p:`Eaton_1985`. For a clear and succinct explanation of its limitations, I recommend the following the recent article by Grace Lindsay on The Transmitter: `Claims of necessity and sufficiency are not well suited for the study of complex systems <https://thetransmitter.substack.com/p/the-sufficiency-and-necessity-principle>`_.
+
   
 
 
