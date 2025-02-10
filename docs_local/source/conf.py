@@ -126,7 +126,7 @@ sphinxcontrib-bibtex 2.6.3 requires docutils!=0.18.*,!=0.19.*,>=0.8, but you hav
 # Navigate to the directory containing the conf.py file
 cd /home/nicolas/Documents/GitHubProjects/UNICOG_ResearchLog/docs_local/
 
-'# Build the html files
+# Build the html files
 make clean; make html
 
 # Sync the html files to the docs folder
@@ -137,8 +137,8 @@ cd  /home/nicolas/Documents/GitHubProjects/UNICOG_ResearchLog/
 
 # Add, commit and push the changes
 git add .
-git commit -m "acknoeledgement to https://goodresearch.dev>  8-)"
-git push -u origin main'
+git commit -m "new README.md!"
+git push -u origin main
 
 
 '''

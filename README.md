@@ -1,6 +1,9 @@
 # ResearchLog, minimal working example
 
-https://nicogravel.github.io/UNICOG_ResearchLog
+See here, for the Github page: https://nicogravel.github.io/UNICOG_ResearchLog
+
+This tutorial is a collaborative effort with [Christophe Pallier](https://github.com/chrplr). Please see here for a boiled down version: https://github.com/chrplr/mynotebook
+
 
 <details>
   <summary><span style="color:#3382FF"> Set up research project codebook folder using Python, Sphinx and Github</span></summary>  
@@ -19,7 +22,6 @@ https://nicogravel.github.io/UNICOG_ResearchLog
   └── README.md
   ```
 
-</details>
 
 Inside docs/index.html we add:
 
@@ -28,7 +30,8 @@ Inside docs/index.html we add:
   ```
 The folder *docs/html* will be copied from *docs_local/build/html* once we build the docs, as explained below. Meanwhile, the folder *docs_local* is added to *.gitignore*.
 
-<br>
+</details>
+
 <br>
 
 <details>
@@ -48,7 +51,6 @@ The folder *docs/html* will be copied from *docs_local/build/html* once we build
 The environment contains Sphinx 5.2.0 and the associated dependencies needed to make Disqus and Bibtex work. Then we can link our github page to our Disqus account and include a
 
 <br>
-<br>
   
 <details>
   <summary><span style="color:#3382FF"> Initialize or fork Github project</span></summary>  
@@ -66,7 +68,6 @@ The environment contains Sphinx 5.2.0 and the associated dependencies needed to 
 
 </details>
 
-<br>
 <br>
   
 <details>
@@ -131,7 +132,6 @@ Try it:
 </details>
 
 <br>
-<br>
 
 <details>
   <summary><span style="color:#3382FF"> Generate project and code documentation using Sphinx</span></summary>  
@@ -162,7 +162,6 @@ Now enjoy building up your python package!
 </details>
   
 <br>
-<br>
   
 <details>
   <summary><span style="color:#3382FF"> Work: edit, make and commit</span></summary>  
@@ -188,5 +187,4 @@ Now enjoy building up your python package!
 
 </details>
   
-<br>
 <br>
