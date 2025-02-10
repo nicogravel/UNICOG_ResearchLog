@@ -15,7 +15,13 @@ This tutorial is a collaborative effort with [Christophe Pallier](https://github
     └──.nojekyll
     └──index.html
   ├── docs_local
-    └── processed
+    └── source
+    └── _static
+    └── _templates
+    └── figures
+    └── myContent.md
+    └── index.rst
+    └── references.bib
   ├── results
   └── .gitignore
   └── requirements.txt
