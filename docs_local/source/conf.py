@@ -137,7 +137,7 @@ cd  /home/nicolas/Documents/GitHubProjects/UNICOG_ResearchLog/
 
 # Add, commit and push the changes
 git add .
-git commit -m "updated requirements.txt, refs and disqus sections work again"
+git commit -m "adding link to article on the main page"
 git push -u origin main
 
 
