@@ -112,6 +112,16 @@ pyenv virtualenv 3.8.19 Sphinx
 pyenv activate Sphinx
 pip install -r requirements.txt
 
+# Then one must force-install Sphinx version 5.2.0
+pip install Sphinx==5.2.0
+pip install myst-parser==2.0.0
+pip install sphinxcontrib-bibtex==1.0.0
+
+#which leads to this error:
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+myst-parser 3.0.1 requires sphinx<8,>=6, but you have sphinx 5.2.0 which is incompatible.
+sphinxcontrib-bibtex 2.6.3 requires docutils!=0.18.*,!=0.19.*,>=0.8, but you have docutils 0.19 which is incompatible.
+
 # Snippets to build the html files, sync them to the docs folder and push the changes to the remote repository
 
 # Activate sphinx environment
@@ -131,7 +141,7 @@ cd  /home/nicolas/Documents/GitHubProjects/UNICOG_ResearchLog/
 
 # Add, commit and push the changes
 git add .
-git commit -m "test: switching from conda to pyenv (hoping it works for Sphinx >5.2)"
+git commit -m "went back to Sphinx 7.2.0, hoping to get disqus to work again"
 git push -u origin main
 
 
