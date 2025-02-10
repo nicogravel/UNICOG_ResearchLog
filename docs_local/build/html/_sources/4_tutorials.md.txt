@@ -83,22 +83,31 @@ The environment contains Sphinx 5.2.0 and the associated dependencies needed to 
 <details>
   <summary><span style="color:#3382FF"> Create a Python package</span></summary>  
 
-  Create a setup.py file in the root of your project: 
+  Create a pyproject.toml file in the root of your project: 
   
   ```shell
-  cd UNICOG_ResearchLog
-  touch setup.py
+  cd ResearchLog
+  touch pyproject.toml.py
   ```
   
   and add the following to setup.py:
 
-  ```python
-  from setuptools import find_packages, setup
+  ```toml
+  [build-system]
+  requires = ["setuptools", "wheel"]
+  build-backend = "setuptools.build_meta"
 
-  setup(
-      name='myCodeIsYourCode',
-      packages=find_packages(),
-  )
+  [project]
+  name = "myCodeIsYourCode"
+  version = "0.0.0"  # You can specify the version here
+  description = "A short description of your project"
+  readme = "README.md"
+  requires-python = ">=3.8"
+
+
+  [tool.setuptools.packages.find]
+  where = ["."]
+
   ```
   Create myCodeIsYourCode directory an add empty __init__.py file to it, together with a python file that prints "hello world" to your package:
 
@@ -123,7 +132,7 @@ Try it:
   python
   ```
   Then in python:
-  
+
   ```python
   >>> import myCodeIsYourCode.helloworld
   hello world
@@ -138,21 +147,13 @@ Try it:
 <details>
   <summary><span style="color:#3382FF"> Generate project and code documentation using Sphinx</span></summary>  
 
-  The folder *docs* will be used to generate [sphinx](https://www.sphinx-doc.org/en/master/index.html) docs, `cd` into this directory and run:
+  The folder *docs_local* will be used to generate the [sphinx](https://www.sphinx-doc.org/en/master/index.html) documentation. Then, we will copy the *build/html* to *docs*.
 
   ```shell
-  pip install sphinx
-  pip install sphinxcontrib-bibtex
-  pip install sphinxcontrib-napoleon
-  pip install -U sphinxcontrib-matlabdomain
-  pip install sphinx-autodoc-typehints
-
-  sphinx-quickstart
-  make html
+  cd /home/.../ResearchLog/docs_local/
+  make clean; make html
+  rsync -a --delete /home/.../ResearchLog/docs_local/build/html /home/.../ResearchLog/docs/
   ```
-
-  We can then install [sphinx.ext.napoleon](https://www.sphinx-doc.org/ar/master/usage/extensions/napoleon.html), a *sphinx* plugin, to automatically read the *doctsrings* we have written as 'readme's' in the top of our python scripts, and add that content to the package dictionary of functions. To do so:
-
 
 Edit *myCodeIsYourCode.rst*: add *:noindex:* to the end of the file, as follows:
 
@@ -186,7 +187,15 @@ Now enjoy building up your python package!
   make html
   ```
 
-  After adding new code and document it as described, write docstrings, etc, do not forget to commit the changes to Github and update both the documentation and the package.
+  After adding new code and document everything, write docstrings, etc, do not forget to commit the changes to Github and update both the documentation and the package. For example, if you write new python functions, do:
+
+  ```shell
+  pip install -e .
+  sphinx-apidoc -f -o docs_local/source myCodeIsYourCode
+  git add .
+  git commit -m "replace setup.py for pyproject.toml, updates in docstrings"
+  git push -u origin main'
+  ```
 
 </details>
   

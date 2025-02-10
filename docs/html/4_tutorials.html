@@ -166,18 +166,26 @@ pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </s
 <br>
 <details>
   <summary><span style="color:#3382FF"> Create a Python package</span></summary>  
-<p>Create a setup.py file in the root of your project:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>UNICOG_ResearchLog
-touch<span class="w"> </span>setup.py
+<p>Create a pyproject.toml file in the root of your project:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>ResearchLog
+touch<span class="w"> </span>pyproject.toml.py
 </pre></div>
 </div>
 <p>and add the following to setup.py:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">find_packages</span><span class="p">,</span> <span class="n">setup</span>
+<div class="highlight-toml notranslate"><div class="highlight"><pre><span></span><span class="k">[build-system]</span>
+<span class="n">requires</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;setuptools&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;wheel&quot;</span><span class="p">]</span>
+<span class="n">build-backend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;setuptools.build_meta&quot;</span>
 
-<span class="n">setup</span><span class="p">(</span>
-    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;myCodeIsYourCode&#39;</span><span class="p">,</span>
-    <span class="n">packages</span><span class="o">=</span><span class="n">find_packages</span><span class="p">(),</span>
-<span class="p">)</span>
+<span class="k">[project]</span>
+<span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;myCodeIsYourCode&quot;</span>
+<span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;0.0.0&quot;</span><span class="w">  </span><span class="c1"># You can specify the version here</span>
+<span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;A short description of your project&quot;</span>
+<span class="n">readme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;README.md&quot;</span>
+<span class="n">requires-python</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&gt;=3.8&quot;</span>
+
+
+<span class="k">[tool.setuptools.packages.find]</span>
+<span class="n">where</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;.&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Create myCodeIsYourCode directory an add empty <strong>init</strong>.py file to it, together with a python file that prints “hello world” to your package:</p>
@@ -208,18 +216,12 @@ sphinx-apidoc<span class="w"> </span>-f<span class="w"> </span>-o<span class="w"
 <br>
 <details>
   <summary><span style="color:#3382FF"> Generate project and code documentation using Sphinx</span></summary>  
-<p>The folder <em>docs</em> will be used to generate <a class="reference external" href="https://www.sphinx-doc.org/en/master/index.html">sphinx</a> docs, <code class="docutils literal notranslate"><span class="pre">cd</span></code> into this directory and run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>sphinx
-pip<span class="w"> </span>install<span class="w"> </span>sphinxcontrib-bibtex
-pip<span class="w"> </span>install<span class="w"> </span>sphinxcontrib-napoleon
-pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>sphinxcontrib-matlabdomain
-pip<span class="w"> </span>install<span class="w"> </span>sphinx-autodoc-typehints
-
-sphinx-quickstart
-make<span class="w"> </span>html
+<p>The folder <em>docs_local</em> will be used to generate the <a class="reference external" href="https://www.sphinx-doc.org/en/master/index.html">sphinx</a> documentation. Then, we will copy the <em>build/html</em> to <em>docs</em>.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/home/.../ResearchLog/docs_local/
+make<span class="w"> </span>clean<span class="p">;</span><span class="w"> </span>make<span class="w"> </span>html
+rsync<span class="w"> </span>-a<span class="w"> </span>--delete<span class="w"> </span>/home/.../ResearchLog/docs_local/build/html<span class="w"> </span>/home/.../ResearchLog/docs/
 </pre></div>
 </div>
-<p>We can then install <a class="reference external" href="https://www.sphinx-doc.org/ar/master/usage/extensions/napoleon.html">sphinx.ext.napoleon</a>, a <em>sphinx</em> plugin, to automatically read the <em>doctsrings</em> we have written as ‘readme’s’ in the top of our python scripts, and add that content to the package dictionary of functions. To do so:</p>
 <p>Edit <em>myCodeIsYourCode.rst</em>: add <em>:noindex:</em> to the end of the file, as follows:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">Module contents</span>
 <span class="gh">---------------</span>
@@ -243,7 +245,14 @@ make<span class="w"> </span>clean
 make<span class="w"> </span>html
 </pre></div>
 </div>
-<p>After adding new code and document it as described, write docstrings, etc, do not forget to commit the changes to Github and update both the documentation and the package.</p>
+<p>After adding new code and document everything, write docstrings, etc, do not forget to commit the changes to Github and update both the documentation and the package. For example, if you write new python functions, do:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install -e .
+sphinx-apidoc -f -o docs_local/source myCodeIsYourCode
+git add .
+git commit -m &quot;replace setup.py for pyproject.toml, updates in docstrings&quot;
+git push -u origin main&#39;
+</pre></div>
+</div>
 </details>
 <br>
 <br>
