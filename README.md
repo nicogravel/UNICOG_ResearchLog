@@ -48,7 +48,6 @@ The folder `docs/html` will be copied from `docs_local/build/html` once we build
 
 </details>
 
-The environment contains Sphinx 5.2.0 and the associated dependencies needed to make Disqus and Bibtex work. Then we can link our github page to our Disqus account and include a
 
 <br>
   
