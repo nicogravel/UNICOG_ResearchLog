@@ -30,7 +30,6 @@ If reflecting on this wasn't already challenging, the so-called *Sufficiency and
 Both anecdotes matter to us, as the process of experimental design and statistical inference that we engage in often involves the equivalent of  "deactivating" or "activating" a *region of interest* using various tools (*e.g.* perceptual/cognitive/behavioral tasks, pharmacological interventions, animal models, *etc...*) and recording modalities (*e.g.* electrophysiology, fMRI, *etc...*), measuring changes in behavior before and after manipulation, and then drawing causal links between variables. If deactivation leads to suppression of the desired outcome while activation induces that outcome, a causal link can be inferred. However, it's essential to consider potentially *hidden* variables that may influence this relationship  :footcite:p:`Eaton_1985`. 
   
 
-Hope it helps!
 
 **********
 Comments
@@ -70,9 +69,10 @@ Indices
 * :ref:`modindex`
 * :ref:`search`
 
-  
+ 
       
 **********
 References
 **********
+
 .. footbibliography::

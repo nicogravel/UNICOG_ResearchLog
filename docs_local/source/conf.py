@@ -104,8 +104,7 @@ for mod_name in MOCK_MODULES:
 
 '''
 
-# Switch from conda to pyenv
-Python 3.8.19
+# Switch from conda to pyenv (Python 3.8.19)
 
 pyenv install 3.8.19
 pyenv virtualenv 3.8.19 Sphinx
@@ -138,7 +137,7 @@ cd  /home/nicolas/Documents/GitHubProjects/UNICOG_ResearchLog/
 
 # Add, commit and push the changes
 git add .
-git commit -m "fixing dependencies"
+git commit -m "updated requirements.txt, refs and disqus sections work again"
 git push -u origin main
 
 

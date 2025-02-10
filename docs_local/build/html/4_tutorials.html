@@ -118,51 +118,46 @@
 <details>
   <summary><span style="color:#3382FF"> Set up research project codebook folder using Python, Sphinx and Github</span></summary>  
 <p>First, we want to create a project folder that will contain the research code (Matlab, Python, Jupyter notebooks, etc), the data, the results and the documentation:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── data
-  └── raw
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── docs
+  └──.nojekyll
+  └──index.html
+├── docs_local
   └── processed
-├── docs
 ├── results
-├── reports
-  └── figures
-  └── notes
-  └── references
-  └── slides
-├── code
-  └── notebooks
-  └── scripts
-  └── tests
-├── src
-  └── data
-  └── tasks
-  └── models
-  └── visualization
-├── tests
 └── .gitignore
-└── environment.yml
+└── requirements.txt
 └── README.md
 </pre></div>
 </div>
 </details>
+<p>Inside docs/index.html we add:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;refresh&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;0; url=./html/index.html&quot;</span> <span class="p">/&gt;</span>
+</pre></div>
+</div>
+<p>The folder <em>docs/html</em> will be copied from <em>docs_local/build/html</em> once we build the docs, as explained below. Meanwhile, the folder <em>docs_local</em> is added to <em>.gitignore</em>.</p>
 <br>
 <br>
 <details>
-  <summary><span style="color:#3382FF"> Set up Conda environment from another computer</span></summary>  
-<p>We can then recreate Conda environment from another computer:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">recoveredenv</span> <span class="o">--</span><span class="n">file</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
+  <summary><span style="color:#3382FF"> Set up pyenv environment (first install pyenv)</span></summary>  
+<p>We can then create a python environment locally and install Sphinx:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pyenv<span class="w"> </span>install<span class="w"> </span><span class="m">3</span>.8.19
+pyenv<span class="w"> </span>virtualenv<span class="w"> </span><span class="m">3</span>.8.19<span class="w"> </span>Sphinx
+pyenv<span class="w"> </span>activate<span class="w"> </span>Sphinx
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </pre></div>
 </div>
 </details>
+<p>The environment contains Sphinx 5.2.0 and the associated dependencies needed to make Disqus and Bibtex work. Then we can link our github page to our Disqus account and include a</p>
 <br>
 <br>
 <details>
   <summary><span style="color:#3382FF"> Initialize or fork Github project</span></summary>  
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;# UNICOG_ResearchLog&quot;</span> <span class="o">&gt;&gt;</span> <span class="n">README</span><span class="o">.</span><span class="n">md</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;# ResearchLog&quot;</span> <span class="o">&gt;&gt;</span> <span class="n">README</span><span class="o">.</span><span class="n">md</span>
 <span class="n">git</span> <span class="n">init</span>
 <span class="n">git</span> <span class="n">add</span> <span class="n">README</span><span class="o">.</span><span class="n">md</span>
 <span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;1st commit&quot;</span>
 <span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">M</span> <span class="n">main</span>
-<span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">nicogravel</span><span class="o">/</span><span class="n">UNICOG_ResearchLog</span><span class="o">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/.../</span><span class="n">ResearchLog</span><span class="o">.</span><span class="n">git</span>
 <span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">main</span>
 </pre></div>
 </div>
@@ -177,7 +172,7 @@ touch<span class="w"> </span>setup.py
 </pre></div>
 </div>
 <p>and add the following to setup.py:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">setuptools</span><span class="w"> </span><span class="kn">import</span> <span class="n">find_packages</span><span class="p">,</span> <span class="n">setup</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">find_packages</span><span class="p">,</span> <span class="n">setup</span>
 
 <span class="n">setup</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="s1">&#39;myCodeIsYourCode&#39;</span><span class="p">,</span>
@@ -202,7 +197,8 @@ sphinx-apidoc<span class="w"> </span>-f<span class="w"> </span>-o<span class="w"
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">myCodeIsYourCode.helloworld</span>
+<p>Then in python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">myCodeIsYourCode.helloworld</span>
 <span class="go">hello world</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">exit</span><span class="p">()</span>
 </pre></div>

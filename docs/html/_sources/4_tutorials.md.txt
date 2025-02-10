@@ -19,46 +19,44 @@ comments: true
   First, we want to create a project folder that will contain the research code (Matlab, Python, Jupyter notebooks, etc), the data, the results and the documentation:
 
   ```
-  ├── data
-    └── raw
-    └── processed
   ├── docs
+    └──.nojekyll
+    └──index.html
+  ├── docs_local
+    └── processed
   ├── results
-  ├── reports
-    └── figures
-    └── notes
-    └── references
-    └── slides
-  ├── code
-    └── notebooks
-    └── scripts
-    └── tests
-  ├── src
-    └── data
-    └── tasks
-    └── models
-    └── visualization
-  ├── tests
   └── .gitignore
-  └── environment.yml
+  └── requirements.txt
   └── README.md
   ```
 
 </details>
 
+Inside docs/index.html we add:
+
+  ```html
+  <meta http-equiv="refresh" content="0; url=./html/index.html" />
+  ```
+The folder *docs/html* will be copied from *docs_local/build/html* once we build the docs, as explained below. Meanwhile, the folder *docs_local* is added to *.gitignore*.
+
 <br>
 <br>
 
 <details>
-  <summary><span style="color:#3382FF"> Set up Conda environment from another computer</span></summary>  
+  <summary><span style="color:#3382FF"> Set up pyenv environment (first install pyenv)</span></summary>  
 
-  We can then recreate Conda environment from another computer:
+  We can then create a python environment locally and install Sphinx:
 
-  ```
-  conda env create --name recoveredenv --file environment.yml
+  ```shell
+  pyenv install 3.8.19
+  pyenv virtualenv 3.8.19 Sphinx
+  pyenv activate Sphinx
+  pip install -r requirements.txt
   ```
 
 </details>
+
+The environment contains Sphinx 5.2.0 and the associated dependencies needed to make Disqus and Bibtex work. Then we can link our github page to our Disqus account and include a
 
 <br>
 <br>
@@ -68,12 +66,12 @@ comments: true
 
 
   ```
-  echo "# UNICOG_ResearchLog" >> README.md
+  echo "# ResearchLog" >> README.md
   git init
   git add README.md
   git commit -m "1st commit"
   git branch -M main
-  git remote add origin https://github.com/nicogravel/UNICOG_ResearchLog.git
+  git remote add origin https://github.com/.../ResearchLog.git
   git push -u origin main
   ```
 
@@ -124,6 +122,7 @@ Try it:
   ```shell
   python
   ```
+  Then in python:
   
   ```python
   >>> import myCodeIsYourCode.helloworld
