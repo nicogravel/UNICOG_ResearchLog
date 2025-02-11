@@ -176,7 +176,7 @@ Now enjoy building up your python package!
 
   After these steps one wants to *make* the documentation locally. To build the documentation automatically, edit then the document `modules.rst` –if necessary, and do *make clean* followed by *make html*.
 
-  ``` shell
+  ```shell
   cd docs_local
   make clean
   make html
