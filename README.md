@@ -2,7 +2,8 @@
 
 See here, for the Github page: https://nicogravel.github.io/UNICOG_ResearchLog
 
-This tutorial is a collaborative effort with [Christophe Pallier](https://github.com/chrplr). Please see here for a boiled down version: https://github.com/chrplr/mynotebook
+This tutorial is a collaborative effort with [Christophe Pallier](https://github.com/chrplr). Please see [here](https://github.com/chrplr/mynotebook) for a boiled down (or "*distilled*") version. 
+
 
 
 <details>

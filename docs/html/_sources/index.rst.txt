@@ -8,8 +8,8 @@ Documenting research with *Sphinx*
 *************************************************************
 **Goal:** keep track of progress during the research process.   
 *************************************************************
-
-The tutorial is an adaptation of `The Good Research Code Handbook <https://goodresearch.dev>`_, by Patrick Mineault. It is delivered as a Github repo based on `Sphinx <https://www.sphinx-doc.org/en/master/>`_, `Markdown <https://daringfireball.net/projects/markdown/>`_ and `reStructuredText <https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site>`_ (rendered using `Github pages <https://jekyllrb.com/docs/github-pages/>`_). Its purpose is to provide us with a scaffold for a personalised *research log* that can be easily adapted to one's individual needs.     
+  
+This `tutorial <https://github.com/nicogravel/UNICOG_ResearchLog>`_ is an adaptation of `The Good Research Code Handbook <https://goodresearch.dev>`_, by `Patrick Mineault <https://scholar.google.com/citations?user=gpQg9uQAAAAJ&hl=en>`_. It is delivered as a Github repo based on `Sphinx <https://www.sphinx-doc.org/en/master/>`_, `Markdown <https://daringfireball.net/projects/markdown/>`_ and `reStructuredText <https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site>`_ (rendered using `Github pages <https://jekyllrb.com/docs/github-pages/>`_). Its purpose is to provide us with a scaffold for a personalised *research log* that can be easily adapted to one's individual needs.     
   
   
 Before we begin, I wanted to share a couple of stories, both as a primer and as an example of how to use the resource, its functionalities, etc. 
@@ -19,7 +19,7 @@ Recently, I encountered an article discussing the ongoing replication crisis in 
   *Statisticians should be less like priests and more plumbers. I don't care what you personally believe is the right way to do things - if I have a specific problem, I want to know all possible solutions that might fix it, what their limitations are, and how much each would cost.*                     `Daniël Lackens <https://twitter.com/lakens>`_
 
 
-If reflecting on this wasn't already challenging, the so-called *Sufficiency and Necessity Principle* then came to mind. I remember having heard about it some years ago during a talk about the integration of causality in enactive approaches by `Shaun Gallagher <https://en.wikipedia.org/wiki/Shaun_Gallagher>`_. One of these concepts often discussed in the context of practical inference of causality. The principle is based on the idea that if a certain variable is necessary for a certain outcome, then the absence of that variable will lead to the absence of the outcome. On the other hand, if a variable is sufficient for an outcome, then the presence of that variable will lead to the presence of the outcome, as shown in the following diagram: 
+If reflecting on this wasn't already challenging, the so-called *Sufficiency and Necessity Principle* :footcite:p:`Eaton_1985`` then came to mind. I remember having heard about it some years ago during a talk about the integration of causality in enactive approaches by `Shaun Gallagher <https://en.wikipedia.org/wiki/Shaun_Gallagher>`_. One of these concepts often discussed in the context of practical inference of causality. The principle is based on the idea that if a certain variable is necessary for a certain outcome, then the absence of that variable will lead to the absence of the outcome. On the other hand, if a variable is sufficient for an outcome, then the presence of that variable will lead to the presence of the outcome, as shown in the following diagram: 
 
 |
     
@@ -28,11 +28,12 @@ If reflecting on this wasn't already challenging, the so-called *Sufficiency and
       :align: center 
         
   
-Both anecdotes matter to us, as the process of experimental design and statistical inference that we engage in often involves the equivalent of  "deactivating" or "activating" a *region of interest* using various tools (*e.g.* perceptual/cognitive/behavioral tasks, pharmacological interventions, animal models, *etc...*) and recording modalities (*e.g.* electrophysiology, fMRI, *etc...*), measuring changes in behavior before and after manipulation, and then drawing causal links between variables. If deactivation leads to suppression of the desired outcome while activation induces that outcome, a causal link can be inferred. However, it's essential to consider potentially *hidden* variables that may influence this relationship  :footcite:p:`Eaton_1985`.  
-  
-For a more detailed explanation of its limitations, I recommend this recent article by Grace Lindsay on The Transmitter: `Claims of necessity and sufficiency are not well suited for the study of complex systems <https://doi.org/10.53053/IHMY3378>`_.
-  
-  
+Both anecdotes matter to us, as the process of experimental design and statistical inference that we engage in often involves the equivalent of  "deactivating" or "activating" a *region of interest* using various tools (*e.g.* perceptual/cognitive/behavioral tasks, pharmacological interventions, animal models, *etc...*) and recording modalities (*e.g.* electrophysiology, fMRI, *etc...*), measuring changes in behavior before and after manipulation, and then drawing causal links between variables. If deactivation leads to suppression of the desired outcome while activation induces that outcome, a causal link *may** be inferred. However, it's essential to consider potentially *hidden* variables that may influence this relationship  :footcite:p:`Gomez-Marin_2017`.  
+        
+For a simple and clear critique of the Sufficiency and Necessity *Principle* limitations, I recommend this recent article by `Grace Lindsay <https://scholar.google.com/citations?user=4kETHY4AAAAJ&hl=en>`_ on `The Transmitter: Claims of necessity and sufficiency are not well suited for the study of complex systems <https://doi.org/10.53053/IHMY3378>`_ or .
+
+Do not take what is written here textual. To be clear, there is no endorsement of *Sufficiency and Necessity Principle* or pointers/assumptions to correlation-causality links. Moreover, this text is intentionally human-like and meant to be *mysteriös/rätselhaft*, as it is my own non-chatGPT lorep-ipsum, as well as an ongoing exercise in public writing. From humans to humans. As such, it contains errors and mutates from time to time.  
+    
 
 
 **********
