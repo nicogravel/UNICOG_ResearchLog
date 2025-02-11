@@ -34,7 +34,7 @@ Both anecdotes matter to us, as the process of experimental design and statistic
         
 For a simple and clear critique of the Sufficiency and Necessity *Principle* limitations, I recommend this recent article by `Grace Lindsay <https://scholar.google.com/citations?user=4kETHY4AAAAJ&hl=en>`_ on `The Transmitter: Claims of necessity and sufficiency are not well suited for the study of complex systems <https://doi.org/10.53053/IHMY3378>`_ or .
 
-Do not take what is written here textual. To be clear, there is no endorsement of *Sufficiency and Necessity Principle* or pointers/assumptions to correlation-causality links. Moreover, this text is intentionally human-like and meant to be *mysteriös/rätselhaft*, as it is my own non-chatGPT lorep-ipsum, as well as an ongoing exercise in public writing. From humans to humans. As such, it contains errors and mutates from time to time.  
+Do not take what is written here textual. To be clear, there is no endorsement of *Sufficiency and Necessity Principle* or pointers/assumptions to correlation-causality links. Moreover, this text is intentionally human-like and meant to be *mysteriös/rätselhaft*, as it is my own non-chatGPT lorep-ipsum (and English is not my mother tongue) as well as an ongoing exercise in public writing. From humans to humans. As such, it contains errors and mutates from time to time.  
     
 
 
