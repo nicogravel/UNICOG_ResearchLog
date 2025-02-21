@@ -137,7 +137,7 @@ cd  /home/nicolas/Documents/GitHubProjects/UNICOG_ResearchLog/
 
 # Add, commit and push the changes
 git add .
-git commit -m "Provided closure to the welcoming text in index.rst (stopping edits for today as the commit count is growing)"
+git commit -m "added code-workspace to .gitignore"
 git push -u origin main
 
 
